@@ -13,7 +13,7 @@ def generator(prefix, domain, password, num):
         headers = {
             'Accept':'application/json',
             'Origin':'https://www.ssense.com',
-            'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+            'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
             'Content-Type':'application/x-www-form-urlencoded; charset=utf-8',
             'Referer':'https://www.ssense.com/en-us/account/login',
             'Accept-Encoding':'gzip, deflate, br',
@@ -23,7 +23,7 @@ def generator(prefix, domain, password, num):
 
         number = randint(1,9999)
         email = '{}{}@{}'.format(prefix, number, domain)
-        data = {
+        queries = {
             'confirmpassword':password,
             'email':email,
             'gender':'no-thanks',
@@ -32,10 +32,10 @@ def generator(prefix, domain, password, num):
             }
 
 
-        rqst = requests.post("https://www.ssense.com/en-us/account/register", data=data, headers=headers)
+        rqst = requests.post("https://www.ssense.com/en-us/account/register", data = queries, headers = headers)
         if rqst.status_code == 200:
             accounts.append("{}:{}".format(email, password))
-            print("Account created - {}:{}".format(email, password))
+            print("New account w/credentials: {}:{}".format(email, password))
         else:
             print("Account generation failed - check your input(s) and try again.")
 
