@@ -20,9 +20,9 @@ def generator(prefix, domain, password, num):
             'Accept-Language':'en-US,en-GB;q=0.9,en;q=0.8'
             }
 
-
         number = randint(1,9999)
         email = '{}{}@{}'.format(prefix, number, domain)
+       
         data = {
             'confirmpassword':password,
             'email':email,
@@ -32,7 +32,7 @@ def generator(prefix, domain, password, num):
             }
 
 
-        rqst = requests.post("https://www.ssense.com/en-us/account/register", data=data, headers=headers)
+        rqst = requests.post("https://www.ssense.com/en-us/account/register", data = data, headers = headers)
         if rqst.status_code == 200:
             accounts.append("{}:{}".format(email, password))
             print("Account created - {}:{}".format(email, password))
