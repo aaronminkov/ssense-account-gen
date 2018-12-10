@@ -2,14 +2,14 @@
 SSENSE account generator. For purchasing items on https://ssense.com
 
 ## Installation
-Click clone/download, unzip file, follow steps in Execution
+Click `clone or download`, unzip file, follow steps in Execution
 
 ## What do i need to run this?
 python, requests, bs4, random
 
 ## Execution (macOS)
 
-Open terminal
+In terminal:
 
 `cd "directory you saved the .zip file"`
 
