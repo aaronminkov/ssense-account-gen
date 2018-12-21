@@ -16,3 +16,5 @@ In terminal:
 `cd ssense-account-gen-master`
 
 `python ssense.py`
+
+Further execution instructions are listed in Terminal once you run the script. 
