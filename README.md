@@ -11,7 +11,7 @@ To install Python: https://www.python.org/downloads/release/python-2715/
 
 To install everything else: `pip install __library__`
 
-## Execution (macOS)
+## Execution
 
 In terminal:
 
