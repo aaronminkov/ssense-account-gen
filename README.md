@@ -1,5 +1,5 @@
 # ssense-account-gen
-SSENSE account generator. For purchasing items on https://ssense.com
+SSENSE account generator for purchasing items on https://ssense.com
 
 ## Installation
 Click `clone or download`, unzip file, follow steps in Execution
@@ -13,7 +13,7 @@ To install everything else: `pip install __library__`
 
 ## Execution
 
-In terminal:
+In CMD / Terminal:
 
 ```
 cd "directory you saved the .zip file"
@@ -21,4 +21,4 @@ cd ssense-account-gen-master
 python ssense.py
 ```
 
-Further execution instructions are listed in Terminal once you run the script. 
+Further execution instructions are listed in text once you run the script. 
